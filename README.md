@@ -4,7 +4,7 @@ Converting handwritten notes to digital text
 
 ## Project Setup
 
-```
+```bash
 git clone https://github.com/vee-16/notes-to-text.git
 cd notes-to-text
 cp .env.example .env
@@ -28,11 +28,14 @@ pip install -r requirements.txt
         - Document AI API User (Beta)
         - Document AI Editor (Beta)
     - After creating the service account, under actions, select `Manage Keys` > `Add a key` > and create a new json key
-        - Move the downloaded key under the project's directory using: ```mv ~/Downloads/YOUR_KEY.json keys/docai_key.json```
+        - Move the downloaded key under the project's directory using: 
+        ```bash
+        mv ~/Downloads/YOUR_KEY.json keys/docai_key.json
+        ```
 
 - Add to `.env`
 
-```
+```Dotenv
 GOOGLE_APPLICATION_CREDENTIALS=keys/docai_key.json
 GCP_PROJECT_ID=your-project-id
 GCP_LOCATION=us
@@ -44,7 +47,7 @@ GCP_PROCESSOR_ID=your-processor-id
 
 - Add the key to `.env`: 
 
-```
+```Dotenv
 OPENAI_API_KEY=your-key
 ```
 
