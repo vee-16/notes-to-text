@@ -2,3 +2,5 @@
 *.env
 keys/*.json
 .ipynb_checkpoints
+*.ipynb filter=nbstripout
+/data/*.png

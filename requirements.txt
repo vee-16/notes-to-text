@@ -7,3 +7,5 @@ matplotlib
 openai
 python-dotenv
 nbstripout
+pre-commit
+
