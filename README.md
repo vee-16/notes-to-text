@@ -47,3 +47,9 @@ GCP_PROCESSOR_ID=your-processor-id
 ```
 OPENAI_API_KEY=your-key
 ```
+
+
+#### Strip Notebook Outputs:
+Notebook outputs are automatically stripped on every commit using a git hook (via [nbstripout](https://github.com/kynan/nbstripout)) to avoid leaking private data.
+
+You can also strip outputs manually at any time by running `nbstripout notebooks/<your-noteboook>.ipynb` before commiting your changes.
