@@ -51,6 +51,34 @@ GCP_PROCESSOR_ID=your-processor-id
 OPENAI_API_KEY=your-key
 ```
 
+#### 3. HandwritingOCR API (via REST API)
+
+- Create account: https://www.handwritingocr.com
+
+- Generate token in dashboard
+
+Add to `.env`:
+
+```HANDWRITING_OCR_TOKEN=""```
+
+Options to run *HandwritingOCR* on a single document:
+
+```python notes_to_text_extraction.py --pdf ./data/{filename}.pdf --out ./out```
+
+
+Or to batch process files, run the following:
+
+```python notes_to_text_extraction.py --dir ./data --out ./out```
+
+Output files are saved to:
+
+```sh
+./out/{filename}/
+  {filename}.raw.json    # full API response
+  {filename}.pages.json  # {page_number: transcript}
+  {filename}.txt         # combined text from all pages
+```
+
 
 #### Strip Notebook Outputs:
 Notebook outputs are automatically stripped on every commit using a git hook (via [nbstripout](https://github.com/kynan/nbstripout)) to avoid leaking private data.
